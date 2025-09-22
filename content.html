@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
+    <canvas id="matrix"></canvas>
     <div class="container">
         <header class="animate__animated animate__fadeInDown">
             <h1>Yahya Nouri's Path to Huawei Cloud</h1>
@@ -32,46 +33,51 @@
             <p>My journey has been defined by solving problems and building smarter systems, and I’m excited to bring that passion to Huawei’s cloud endeavors. I’m equally enthusiastic about sharing my knowledge and resources on Huawei Cloud with colleagues and peers to foster collective growth.</p>
         </section>
 
-        <section class="timeline animate__animated" data-animate="zoomIn">
+        <section class="roadmap animate__animated" data-animate="zoomIn">
             <h2>My Career Journey</h2>
-            <div class="timeline-icons">
-                <span>📡</span>
-                <span>⚙️</span>
-                <span>📊</span>
-                <span>🛡️</span>
-                <span>☁️</span>
-                <span>⚡</span>
-            </div>
-            <div class="timeline-items">
-                <div class="item animate__animated" data-animate="slideInLeft">
-                    <span>📡</span>
-                    <h3>2020 - HRAN FO Engineer</h3>
-                    <p>Mastered network topology and troubleshooting for GSM, UMTS, LTE, 5G networks. Developed strong problem-solving skills in real-time scenarios.</p>
+            <div class="roadmap-container">
+                <div class="road-line"></div>
+                <div class="milestone left animate__animated" data-animate="slideInLeft">
+                    <div class="milestone-icon">📡</div>
+                    <div class="milestone-content">
+                        <h3>2020 - HRAN FO Engineer</h3>
+                        <p>Mastered network topology and troubleshooting for GSM, UMTS, LTE, 5G networks. Developed strong problem-solving skills in real-time scenarios.</p>
+                    </div>
                 </div>
-                <div class="item animate__animated" data-animate="slideInRight">
-                    <span>⚙️</span>
-                    <h3>2021 - FO Technical Support Engineer</h3>
-                    <p>Deepened expertise in diagnosing and resolving complex network issues. Enhanced technical knowledge across multiple network technologies.</p>
+                <div class="milestone right animate__animated" data-animate="slideInRight">
+                    <div class="milestone-icon">⚙️</div>
+                    <div class="milestone-content">
+                        <h3>2021 - FO Technical Support Engineer</h3>
+                        <p>Deepened expertise in diagnosing and resolving complex network issues. Enhanced technical knowledge across multiple network technologies.</p>
+                    </div>
                 </div>
-                <div class="item animate__animated" data-animate="slideInLeft">
-                    <span>📊</span>
-                    <h3>2022 - NOC Lead Data Analyst</h3>
-                    <p>Built Python-based data pipelines and automated reporting systems. Leveraged data analytics to generate actionable insights for network optimization.</p>
+                <div class="milestone left animate__animated" data-animate="slideInLeft">
+                    <div class="milestone-icon">📊</div>
+                    <div class="milestone-content">
+                        <h3>2022 - NOC Lead Data Analyst</h3>
+                        <p>Built Python-based data pipelines and automated reporting systems. Leveraged data analytics to generate actionable insights for network optimization.</p>
+                    </div>
                 </div>
-                <div class="item animate__animated" data-animate="slideInRight">
-                    <span>🛡️</span>
-                    <h3>2023-2024 - Military Service</h3>
-                    <p>Period of reflection and clarity. Solidified career goals with focus on cloud computing and AI technologies for future professional development.</p>
+                <div class="milestone right animate__animated" data-animate="slideInRight">
+                    <div class="milestone-icon">🛡️</div>
+                    <div class="milestone-content">
+                        <h3>2023-2024 - Military Service</h3>
+                        <p>Period of reflection and clarity. Solidified career goals with focus on cloud computing and AI technologies for future professional development.</p>
+                    </div>
                 </div>
-                <div class="item animate__animated" data-animate="slideInLeft">
-                    <span>📈</span>
-                    <h3>2025 - NPM Data Analyst</h3>
-                    <p>Developed automated dashboards for proactive network optimization. Enhanced team efficiency and precision through data-driven solutions.</p>
+                <div class="milestone left animate__animated" data-animate="slideInLeft">
+                    <div class="milestone-icon">📈</div>
+                    <div class="milestone-content">
+                        <h3>2025 - NPM Data Analyst</h3>
+                        <p>Developed automated dashboards for proactive network optimization. Enhanced team efficiency and precision through data-driven solutions.</p>
+                    </div>
                 </div>
-                <div class="item animate__animated" data-animate="slideInRight">
-                    <span>☁️</span>
-                    <h3>Future - Cloud Engineer</h3>
-                    <p>Pursuing HCIP Cloud Architecture and HCIA AI certifications. Expanding Linux and programming expertise to drive cloud innovation at Huawei.</p>
+                <div class="milestone right animate__animated" data-animate="slideInRight">
+                    <div class="milestone-icon">☁️</div>
+                    <div class="milestone-content">
+                        <h3>Future - Cloud Engineer</h3>
+                        <p>Pursuing HCIP Cloud Architecture and HCIA AI certifications. Expanding Linux and programming expertise to drive cloud innovation at Huawei.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -81,5 +87,6 @@
         </footer>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/matrix.js"></script>
 </body>
 </html>

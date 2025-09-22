@@ -3,14 +3,30 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #FFFFFF; /* White background */
-    color: #000000; /* Black text */
+    background-color: #000000; /* Black for Matrix effect */
+    color: #FFFFFF; /* White text for contrast */
+    position: relative;
+    overflow-x: hidden;
+}
+
+#matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5; /* Semi-transparent for readability */
 }
 
 .container {
     max-width: 900px;
     margin: 0 auto;
     padding: 30px;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay for text readability */
+    border-radius: 12px;
 }
 
 header {
@@ -26,9 +42,9 @@ h1, h2 {
 .section {
     margin-bottom: 50px;
     padding: 20px;
-    background-color: #F9F9F9; /* Light white-gray for sections */
+    background-color: rgba(249, 249, 249, 0.1); /* Light transparent for sections */
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(207, 10, 44, 0.2);
     transition: transform 0.3s ease;
 }
 
@@ -36,48 +52,106 @@ h1, h2 {
     transform: translateY(-5px);
 }
 
-.timeline {
+.roadmap {
     margin-top: 50px;
+    position: relative;
 }
 
-.timeline-icons {
+.roadmap-container {
+    position: relative;
+    padding: 20px 0;
+}
+
+.road-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #CF0A2C; /* Red road line */
+    transform: translateX(-50%);
+    animation: drawLine 3s ease-in-out forwards;
+}
+
+@keyframes drawLine {
+    from { height: 0; }
+    to { height: 100%; }
+}
+
+.milestone {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 25px;
-    font-size: 24px;
-    color: #CF0A2C; /* Red icons */
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
-.timeline-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.milestone:hover {
+    transform: scale(1.05);
 }
 
-.item {
-    background-color: #FFFFFF;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(207, 10, 44, 0.1); /* Red tint shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.milestone.left {
+    justify-content: flex-start;
+    text-align: left;
 }
 
-.item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 20px rgba(207, 10, 44, 0.2);
+.milestone.right {
+    justify-content: flex-end;
+    text-align: right;
 }
 
-.item span {
-    font-size: 28px;
-    margin-right: 15px;
+.milestone-icon {
+    font-size: 40px;
+    background-color: #CF0A2C;
+    color: #FFFFFF;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: pulseIcon 1.5s infinite;
+}
+
+@keyframes pulseIcon {
+    0% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.1); }
+    100% { transform: translateX(-50%) scale(1); }
+}
+
+.milestone-content {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    width: 45%;
+    box-shadow: 0 2px 10px rgba(207, 10, 44, 0.3);
+}
+
+.milestone.left .milestone-content {
+    margin-right: auto;
+}
+
+.milestone.right .milestone-content {
+    margin-left: auto;
+}
+
+.milestone h3 {
     color: #CF0A2C;
+    margin-bottom: 5px;
+}
+
+.milestone p {
+    margin: 0;
 }
 
 footer {
     text-align: center;
     margin-top: 50px;
     font-size: 0.9em;
-    color: #000000;
+    color: #FFFFFF;
 }
 
 @keyframes slideInLeft {
