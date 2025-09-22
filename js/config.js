@@ -1,1 +1,0 @@
-const PASSWORD = '123qwe!@#QW';
